@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="-35dp"
+        app:srcCompat="@drawable/drukzakar" />
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:background="#FFA500"
+        android:textColor="@color/black"
+        android:layout_marginTop="-5dp"
+        android:text="TextView" />
+
+<!--viewPager-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/viewPager"
+        android:layout_below = "@+id/tabLayout1">
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+<!--tabLayout2-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/viewPager"
+        android:backgroundTint="#e36414"
+        app:tabTextAppearance="@style/myCustomTab2">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/book"
+            android:text="Zakar" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:icon="@drawable/icon_calender"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datho"
+            android:icon="@drawable/start"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:icon="@drawable/info"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:icon="@drawable/contact"/>
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
